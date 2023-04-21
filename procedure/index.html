@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <title></title>
+   <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo-container">
+      <img src="./../static/Screenshot 2023-04-01 at 5.55.png" alt="iitjlogo">
+      <img src="./../static/2.png" alt="bsbelogo">
+    </div>
+    <img src="./../static/menu.png" id="menu-icon">
+    <div class="nav-btn-container">
+      <a href="https://vansh2308.github.io/bsbe2/"> <button class="nav-btn"> Lab 2 </button></a>
+      <a href="./../index.html"> <button class="nav-btn"> Home </button></a>
+      <a href="./../theory/index.html"> <button class="nav-btn"> Theory </button></a>
+      <a href="#"> <button class="nav-btn active"> Procedure </button></a>
+      <a href="./../simulation/index.html"> <button class="nav-btn"> Simulation </button></a>
+      <a href="./../ref/index.html"> <button class="nav-btn"> Reference </button></a>
+      <a href="./../exercise/index.html"> <button class="nav-btn"> Exercise </button></a>
+    </div>
+  </nav>
+
+  <div class="res-menu">
+    <img src="./../static/close.png" alt="close" id="close-btn">
+    <ul>
+      <li><a href="https://vansh2308.github.io/bsbe2/"> <button> Lab 2 </button></a></li>
+      <li><a href="./../index.html"> <button> Home </button></a></li>
+      <li><a href="./../theory/index.html"> <button> Theory </button></a></li>
+      <li><a href="./../procedure/index.html"> <button> Procedure </button></a></li>
+      <li><a href="./../simulation/index.html"> <button> Simulation </button></a></li>
+      <li><a href="./../ref/index.html"> <button> Reference </button></a></li>
+      <li><a href="./../exercise/index.html"> <button> Exercise </button></a></li>
+
+    </ul>
+  </div>
+
+
+  <div class="container">
+
+    <div class="lb" style="font-size: 30px; font-weight: 700; margin-left: -45px;">
+      Procedure <br>
+      <span style="font-family: 'Gloria Hallelujah', cursive; font-size: 20px;">Protein Structure Alignment</span>
+    </div>
+
+    <div class="content">
+      In this section we are going to use MM align Algorithm for protein structure alignment. <br>
+      So first go to <a href="https://www.rcsb.org/to">https://www.rcsb.org/to </a> take the data about the proteins structures that you want to align.
+    </div>
+    <img src="./../static/procedure/Screenshot (7).png" class="ss">
+    
+    <div class="content">
+      Now on the search bar highlighted above, search the two specific type of proteins that you want to compare. Here for example we are going to compare<br>
+
+      1. hemoglobin subunit alpha (PDB ID 4HHB, chain A) and<br>
+
+      2. neuroglobin (PDB ID 1OJ6, chain D).<br>
+
+      The information page will look something like this,
+    </div>
+    <img src="./../static/procedure/Screenshot (8).png" class="ss">
+    
+    <div class="content">
+      Now click on the download files button and download it in the format of PDBx/mmCIF format.
+      Do this for other protein structure also.
+      After downloading the file, go to <a href="https://zhanggroup.org/MM-align/"> https://zhanggroup.org/MM-align/ </a> to perform the alignment.
+    </div>
+    <img src="./../static/procedure/Screenshot (9).png" class="ss">
+    
+    <div class="content">
+      Scroll down and upload the files in the space provided.
+    </div>
+    <img src="./../static/procedure/Screenshot (10).png" class="ss">
+    
+    <div class="content">
+      After uploading click on Run mm-align to see the results. <br> The example structures that we took had the result shown below.
+    </div>
+    <img src="./../static/procedure/Screenshot (13).png" class="ss">
+    
+    <div class="content">
+      Note the highlighted information in the above picture as it is very vital for us in understanding how good is the alignment. 
+
+RMSD (root mean square deviation) is computed between aligned pairs of the backbone C-alpha atoms in superposed structures. The lower the RMSD, the better the structure alignment between the pair of structures.
+
+TM-score (template modeling score) is a measure of topological similarity between the template and model structures. The TM-score ranges between 0 and 1, where 1 indicates a perfect match and 0 is no match between the two structures. Scores < 0.2 usually indicate that the proteins are unrelated while those >0.5 generally have the same protein fold (e.g., classified by SCOP/CATH). Also, in the results two TM scores are given with taking each structure as reference.
+
+So after observing the results we found that RMSD value is 6.47 which is a high value and both the TM scores are also < 0.5. Thus this indicates the above alignment is not good.
+    </div>
+    <img src="./../static/procedure/Screenshot (12).png" class="ss">
+
+
+    <div class="content">And that’s how you can use mm align tool for protein structure alignment. <br>
+      Here are the links for other alignment Tools:</div>
+    <div class="link-container">
+      <a href=""><button> TM Align </button></a>
+      <a href=""><button> Dali Server </button></a>
+      <a href=""><button> KPax </button></a>
+      <a href=""><button> MM Align </button></a>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="./../index.js"></script>
+
+</body>
+</html>
